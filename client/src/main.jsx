@@ -7,7 +7,7 @@ import { AuthContextProvider } from "./context/AuthContext.jsx";
 
 createRoot(document.getElementById("root")).render(
     <StrictMode>
-        <BrowserRouter basename={import.meta.env.mode === "development" ? "/" : "/grocery-store-mern"}>
+        <BrowserRouter basename={import.meta.env.MODE === "development" ? "/" : "/grocery-store-mern"}>
             <AuthContextProvider>
                 <App />
             </AuthContextProvider>
