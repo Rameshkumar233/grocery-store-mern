@@ -3,7 +3,6 @@ setServers(["1.1.1.1", "8.8.8.8"]);
 
 import express from "express";
 import dotenv from "dotenv";
-dotenv.config();
 import cors from "cors";
 import cookieParser from "cookie-parser";
 import { connectDB } from "./config/connectDB.js";
@@ -16,11 +15,13 @@ import orderRoutes from "./routes/order.route.js";
 import adminRoutes from "./routes/admin/admin.route.js";
 import adminUserRoutes from "./routes/admin/adminUser.route.js";
 
+dotenv.config();
+
 const app = express();
 
 app.use(express.json());
 app.use(cookieParser());
-app.use(cors({ origin: "http://localhost:5173", credentials: true }));
+app.use(cors({ origin: process.env.CLIENT_URL, credentials: true }));
 
 const PORT = process.env.PORT || 3000;
 

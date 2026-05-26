@@ -13,13 +13,13 @@ connectDB();
 const importData = async () => {
     try {
         const existingData = await Category.find({});
-        // Clear existing data to avoid duplicates
+        // Clear existing data
         if (existingData) {
             await Category.deleteMany();
             await Product.deleteMany();
         }
 
-        // We add slugs here if the model doesn't auto-generate them
+        // add slugs
         const preparedCategories = categories.map((cat) => ({
             ...cat,
             slug: cat.name.toLowerCase().split(" ").join("-"),
@@ -40,7 +40,7 @@ const importData = async () => {
                 const newCategory = await Category.create({
                     name: product.category,
                     slug,
-                    image: `/images/categories/${product.category}.jpg`,
+                    image: null,
                 });
 
                 categoryMap[slug] = newCategory._id;
