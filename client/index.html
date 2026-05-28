@@ -6,6 +6,19 @@
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Grocery Store</title>
+
+  <script>
+    (function () {
+      let redirectPath = sessionStorage.getItem('redirect_path')
+      let redirectSearch = sessionStorage.getItem('redirect_search')
+      if (redirectPath) {
+        sessionStorage.removeItem('redirect_path')
+        sessionStorage.removeItem('redirect_search')
+        const targetURL = redirectPath + redirectSearch
+        window.history.replaceState(null, null, targetURL)
+      }
+    })()
+  </script>
 </head>
 
 <body>
