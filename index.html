@@ -6,8 +6,21 @@
   <link rel="icon" type="image/svg+xml" href="/grocery-store-mern/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Grocery Store</title>
-  <script type="module" crossorigin src="/grocery-store-mern/assets/index-Cl5luYmN.js"></script>
-  <link rel="stylesheet" crossorigin href="/grocery-store-mern/assets/index-CDA-swZ7.css">
+
+  <script>
+    (function () {
+      let redirectPath = sessionStorage.getItem('redirect_path')
+      let redirectSearch = sessionStorage.getItem('redirect_search')
+      if (redirectPath) {
+        sessionStorage.removeItem('redirect_path')
+        sessionStorage.removeItem('redirect_search')
+        const targetURL = redirectPath + redirectSearch
+        window.history.replaceState(null, null, targetURL)
+      }
+    })()
+  </script>
+  <script type="module" crossorigin src="/grocery-store-mern/assets/index-Bwo8QWM1.js"></script>
+  <link rel="stylesheet" crossorigin href="/grocery-store-mern/assets/index-cVIPL2yY.css">
 </head>
 
 <body>

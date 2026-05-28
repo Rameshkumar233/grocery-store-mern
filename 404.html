@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script>
+        sessionStorage.setItem("redirect_path", window.location.pathname)
+        sessionStorage.setItem("redirect_search", window.location.search)
+        let pathToKeep = window.location.pathname.split('/').slice(0, 2).join('/')
+        window.location.replace(window.location.origin + pathToKeep + '/')
+    </script>
+</head>
+
+<body></body>
+
+</html>
