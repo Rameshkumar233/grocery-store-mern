@@ -23,7 +23,7 @@ const Login = () => {
     };
     return (
         <>
-            <div className="px-8 xs:px-0 flex overflow-x-auto min-h-screen bg-[url('/bg-image-2.png')] bg-cover bg-center bg-slate-700/90 bg-blend-multiply items-center xs:justify-center">
+            <div className="px-8 xs:px-0 flex overflow-x-auto min-h-screen bg-[url('/bg-image.png')] bg-cover bg-center bg-slate-700/90 bg-blend-multiply items-center xs:justify-center">
                 <div className='w-full max-w-md px-6 sm:px-8 py-4 bg-white border border-gray-200 shadow-xl rounded-2xl backdrop-blur-2xl min-w-xs sm:max-w-lg'>
                     <div className='mb-6 text-center'>
                         <h1 className='mb-2 text-2xl font-bold capitalize'>Welcome Back</h1>

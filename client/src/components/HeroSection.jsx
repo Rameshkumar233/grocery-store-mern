@@ -23,8 +23,8 @@ const HeroSection = () => {
                 {/* Image */}
                 <div className='flex-1'>
                     <img
-                        src='/hero-image-1.png'
-                        alt='Colorful assortment of fresh fruits and vegetables arranged on a wooden table'
+                        src={`${import.meta.env.BASE_URL}hero-image.png`}
+                        alt='Colorful assortment of fresh fruits and vegetable'
                         className='w-full h-auto rounded-xl shadow-2xl'
                         loading='lazy'
                     />
